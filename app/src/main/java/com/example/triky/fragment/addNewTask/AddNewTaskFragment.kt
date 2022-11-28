@@ -17,12 +17,15 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.example.triky.R
 import com.example.triky.data.User
+import com.example.triky.databinding.AddNewTaskBinding
 import com.example.triky.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.add_new_task.*
 import java.util.*
 
 class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
 
+    private var _binding: AddNewTaskBinding? = null
+    private val binding get() = _binding!!
     private lateinit var mUserViewModel: UserViewModel
 
     private var colorNumber = 10
@@ -32,7 +35,8 @@ class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.add_new_task, container, false)
+        _binding = AddNewTaskBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -323,5 +327,8 @@ class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
         listener = null
     }
 
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
