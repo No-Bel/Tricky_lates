@@ -1,0 +1,16 @@
+package com.example.triky.data
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity(tableName = "user_table")
+data class User(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
+    val textInfo: String,
+    var checked: Boolean = false,
+    var selected: Boolean = false,
+    var color: Int,
+    val date: String
+)

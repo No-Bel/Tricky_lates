@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    1-->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/days_of_the_week_background_color">
+
+<!--        2-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/days_of_the_week_background_color">
+
+<!--            3-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/days_of_the_week_background_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+<!--            4-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/days_of_the_week"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:background="@drawable/days_of_the_week_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/date_time_home_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="July,2020" />
+
+                <Button
+                    android:id="@+id/add_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/task_save_btn"
+                    android:drawableStart="@drawable/plus"
+                    android:drawablePadding="13dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="@string/new_task"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Monday-->
+                <ImageView
+                    android:id="@+id/Monday_home_imgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/monday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/monday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/monday_hm"
+                    app:layout_constraintTop_toTopOf="@+id/Monday"
+                    app:srcCompat="@drawable/wednesday_rectangle" />
+
+                <TextView
+                    android:id="@+id/Monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Monday"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/monday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/monday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/monday_hm" />
+
+                <TextView
+                    android:id="@+id/monday_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/day_number_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tuesday_hm"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/date_time_home_screen"
+                    tools:text="M" />
+
+                <!--        Tuesday-->
+                <ImageView
+                    android:id="@+id/Tuesday_home_imgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/tuesday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/tuesday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/tuesday_hm"
+                    app:layout_constraintTop_toTopOf="@+id/Tuesday"
+                    app:srcCompat="@drawable/wednesday_rectangle" />
+
+                <TextView
+                    android:id="@+id/Tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Tuesday"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tuesday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/tuesday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/tuesday_hm" />
+
+                <TextView
+                    android:id="@+id/tuesday_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/day_number_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/wednesday_hm"
+                    app:layout_constraintStart_toEndOf="@+id/monday_hm"
+                    tools:text="T" />
+
+
+                <!--Wednesday-->
+                <ImageView
+                    android:id="@+id/Wednesday_home_imgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/wednesday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/wednesday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/wednesday_hm"
+                    app:layout_constraintTop_toTopOf="@+id/Wednesday"
+                    app:srcCompat="@drawable/wednesday_rectangle" />
+
+                <TextView
+                    android:id="@+id/Wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Wednesday"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/wednesday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/wednesday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/wednesday_hm" />
+
+                <TextView
+                    android:id="@+id/wednesday_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/day_number_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/thursday_hm"
+                    app:layout_constraintStart_toEndOf="@+id/tuesday_hm"
+                    tools:text="W" />
+
+
+                <!--        Thursday-->
+                <ImageView
+                    android:id="@+id/Thursday_home_imgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/thursday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/thursday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/thursday_hm"
+                    app:layout_constraintTop_toTopOf="@+id/Thursday"
+                    app:srcCompat="@drawable/wednesday_rectangle" />
+
+                <TextView
+                    android:id="@+id/Thursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Thursday"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/thursday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/thursday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/thursday_hm" />
+
+                <TextView
+                    android:id="@+id/thursday_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/day_number_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/friday_hm"
+                    app:layout_constraintStart_toEndOf="@+id/Wednesday"
+                    tools:text="T" />
+
+
+                <!--        Friday-->
+                <ImageView
+                    android:id="@+id/Friday_home_imgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/friday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/friday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/friday_hm"
+                    app:layout_constraintTop_toTopOf="@+id/Friday"
+                    app:srcCompat="@drawable/wednesday_rectangle" />
+
+                <TextView
+                    android:id="@+id/Friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Friday"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/friday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/friday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/friday_hm" />
+
+                <TextView
+                    android:id="@+id/friday_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/day_number_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/saturday_hm"
+                    app:layout_constraintStart_toEndOf="@+id/thursday_hm"
+                    tools:text="F" />
+
+
+                <!--        Saturday-->
+                <ImageView
+                    android:id="@+id/Saturday_home_imgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/saturday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/saturday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/saturday_hm"
+                    app:layout_constraintTop_toTopOf="@+id/Saturday"
+                    app:srcCompat="@drawable/wednesday_rectangle" />
+
+                <TextView
+                    android:id="@+id/Saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Saturday"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/saturday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/saturday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/saturday_hm" />
+
+                <TextView
+                    android:id="@+id/saturday_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/day_number_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sunday_hm"
+                    app:layout_constraintStart_toEndOf="@+id/friday_hm"
+                    tools:text="S" />
+
+
+                <!--        Sunday-->
+                <ImageView
+                    android:id="@+id/Sunday_home_imgV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/sunday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/sunday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/sunday_hm"
+                    app:layout_constraintTop_toTopOf="@+id/Sunday"
+                    app:srcCompat="@drawable/wednesday_rectangle" />
+
+                <TextView
+                    android:id="@+id/Sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/Sunday"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/sunday_hm"
+                    app:layout_constraintEnd_toEndOf="@+id/sunday_hm"
+                    app:layout_constraintStart_toStartOf="@+id/sunday_hm" />
+
+
+                <TextView
+                    android:id="@+id/sunday_hm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/day_number_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/saturday_hm"
+                    tools:text="S" />
+
+
+<!--                4-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ImageView
+                android:id="@+id/todoImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintBottom_toTopOf="@+id/home_screen_Rv"
+                app:layout_constraintStart_toStartOf="@+id/home_screen_Rv"
+                app:layout_constraintTop_toBottomOf="@+id/days_of_the_week"
+                app:srcCompat="@drawable/todo_rectangle" />
+
+            <TextView
+                android:id="@+id/home_screen_todo_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/to_do"
+                android:textColor="@color/day_number_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/todoImg"
+                app:layout_constraintStart_toEndOf="@+id/todoImg"
+                app:layout_constraintTop_toTopOf="@+id/todoImg" />
+
+            <ImageView
+
+                android:id="@+id/sort_by_Iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/sort_by_Tv"
+                app:layout_constraintEnd_toStartOf="@+id/sort_by_Tv"
+                app:layout_constraintTop_toTopOf="@+id/sort_by_Tv"
+                app:srcCompat="@drawable/sort_task_by" />
+
+
+            <TextView
+                android:id="@+id/sort_by_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/sort_by"
+                android:textColor="#b9c8cf"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/home_screen_todo_Tv"
+                app:layout_constraintEnd_toEndOf="@+id/home_screen_Rv"
+                app:layout_constraintTop_toTopOf="@+id/home_screen_todo_Tv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_screen_Rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/completedTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_screen_todo_Tv" />
+
+            <ImageView
+                android:id="@+id/completedImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintEnd_toEndOf="@id/todoImg"
+                app:layout_constraintStart_toStartOf="@+id/todoImg"
+                app:layout_constraintTop_toBottomOf="@+id/home_screen_Rv"
+                app:srcCompat="@drawable/completed_rct" />
+
+            <TextView
+                android:id="@+id/completedTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/completed"
+                android:textColor="@color/day_number_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/completedImg"
+                app:layout_constraintStart_toEndOf="@+id/completedImg"
+                app:layout_constraintTop_toTopOf="@+id/completedImg" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_screen_completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/completedTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+<!--         3-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        2-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    1-->
+    </androidx.core.widget.NestedScrollView>
+
+<!--    5-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_screen_below_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/done_task_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/done_btn_drawable"
+            android:drawableStart="@drawable/done_mark"
+            android:drawablePadding="3dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+
+            android:id="@+id/delete_task_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/delete_btn_drawable"
+            android:drawableStart="@drawable/delete_mark"
+            android:drawablePadding="3dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/done_task_btn"
+            app:layout_constraintEnd_toStartOf="@+id/cancel_task_btn"
+            app:layout_constraintStart_toEndOf="@+id/done_task_btn"
+            app:layout_constraintTop_toTopOf="@+id/done_task_btn" />
+
+        <Button
+            android:id="@+id/cancel_task_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/cancel_btn_drawable"
+            android:drawableStart="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="@id/delete_task_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/delete_task_button" />
+
+<!--        5-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    6-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gradient"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/gradient"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/days_of_the_week_background_color">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/days_of_the_week"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/days_of_the_week_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/date_time_no_home_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="July,2020" />
+
+        <!--Monday-->
+        <ImageView
+            android:id="@+id/Monday_ImgV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/monday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/monday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/monday_no_task"
+            app:layout_constraintTop_toTopOf="@+id/Monday_no_task"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/wednesday_rectangle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/Monday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Monday"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/monday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/monday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/monday_no_task" />
+
+        <TextView
+            android:id="@+id/monday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/day_number_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tuesday_no_task"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="M" />
+
+        <!--        Tuesday-->
+        <ImageView
+            android:id="@+id/Tuesday_ImgV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tuesday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/tuesday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/tuesday_no_task"
+            app:layout_constraintTop_toTopOf="@+id/Tuesday_no_task"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/wednesday_rectangle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/Tuesday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Tuesday"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tuesday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/tuesday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/tuesday_no_task" />
+
+        <TextView
+            android:id="@+id/tuesday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/day_number_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/wednesday_no_task"
+            app:layout_constraintStart_toEndOf="@+id/monday_no_task"
+            tools:text="T" />
+
+
+        <!--Wednesday-->
+        <ImageView
+            android:id="@+id/Wednesday_ImgV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/wednesday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/wednesday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/wednesday_no_task"
+            app:layout_constraintTop_toTopOf="@+id/Wednesday_no_task"
+            app:srcCompat="@drawable/wednesday_rectangle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/Wednesday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Wednesday"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/wednesday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/wednesday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/wednesday_no_task" />
+
+        <TextView
+            android:id="@+id/wednesday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/day_number_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/thursday_no_task"
+            app:layout_constraintStart_toEndOf="@+id/tuesday_no_task"
+            tools:text="W" />
+
+
+        <!--        Thursday-->
+        <ImageView
+            android:id="@+id/Thursday_ImgV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/thursday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/thursday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/thursday_no_task"
+            app:layout_constraintTop_toTopOf="@+id/Thursday_no_task"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/wednesday_rectangle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/Thursday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Thursday"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/thursday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/thursday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/thursday_no_task" />
+
+        <TextView
+            android:id="@+id/thursday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/day_number_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/friday_no_task"
+            app:layout_constraintStart_toEndOf="@+id/Wednesday_no_task"
+            tools:text="T" />
+
+
+        <!--        Friday-->
+        <ImageView
+            android:id="@+id/Friday_ImgV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/friday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/friday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/friday_no_task"
+            app:layout_constraintTop_toTopOf="@+id/Friday_no_task"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/wednesday_rectangle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/Friday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Friday"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/friday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/friday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/friday_no_task" />
+
+        <TextView
+            android:id="@+id/friday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/day_number_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saturday_no_task"
+            app:layout_constraintStart_toEndOf="@+id/thursday_no_task"
+            tools:text="F" />
+
+
+        <!--        Saturday-->
+        <ImageView
+            android:id="@+id/Saturday_ImgV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/saturday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/saturday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/saturday_no_task"
+            app:layout_constraintTop_toTopOf="@+id/Saturday_no_task"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/wednesday_rectangle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/Saturday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Saturday"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/saturday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/saturday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/saturday_no_task" />
+
+        <TextView
+            android:id="@+id/saturday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/day_number_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sunday_no_task"
+            app:layout_constraintStart_toEndOf="@+id/friday_no_task"
+            tools:text="S" />
+
+
+        <!--        Sunday-->
+        <ImageView
+            android:id="@+id/Sunday_ImgV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/sunday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/sunday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/sunday_no_task"
+            app:layout_constraintTop_toTopOf="@+id/Sunday_no_task"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/wednesday_rectangle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/Sunday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/Sunday"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/sunday_no_task"
+            app:layout_constraintEnd_toEndOf="@+id/sunday_no_task"
+            app:layout_constraintStart_toStartOf="@+id/sunday_no_task" />
+
+
+        <TextView
+            android:id="@+id/sunday_no_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/day_number_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/saturday_no_task"
+            tools:text="S" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/boring_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="89dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/days_of_the_week"
+        app:srcCompat="@drawable/boring_cat"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/boring_cat_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="10sp"
+        android:lines="2"
+        android:text="@string/boring_cat_text"
+        android:textColor="#1e212b"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/boring_cat"
+        app:layout_constraintStart_toStartOf="@+id/boring_cat"
+        app:layout_constraintTop_toBottomOf="@+id/boring_cat" />
+
+    <Button
+
+        android:id="@+id/add_task_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="133dp"
+        android:background="@drawable/disabled_save_button"
+        android:drawableStart="@drawable/plus"
+        android:drawablePadding="8dp"
+        android:text="@string/new_task"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boring_cat_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
