@@ -24,17 +24,17 @@ class MainActivity : AppCompatActivity(), OnboardingFragment.ButtonClicked,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        sharePref = Preference(this)
-        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
-
-        homeScreenFragment = HomeScreenFragment(EditTask = {user -> updateTask(user)})
-
-        // onBoarding || firstScreen
+        init()
         appStart()
-
     }
 
-    //onBoarding || noTaskHomeScreen || homeScreen
+    private fun init() {
+        sharePref = Preference(this)
+        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+        homeScreenFragment = HomeScreenFragment(EditTask = {user -> updateTask(user)})
+    }
+
+    // onBoarding || firstScreen( noTaskHomeScreen || homeScreen )
     private fun appStart() {
         if (sharePref.getWhenAppFirstTimeOpen()) {
             mUserViewModel.readAllData.observe(this, Observer {
@@ -48,8 +48,6 @@ class MainActivity : AppCompatActivity(), OnboardingFragment.ButtonClicked,
             onboarding()
         }
     }
-
-
 
     private fun homeScreen() {
         supportFragmentManager
