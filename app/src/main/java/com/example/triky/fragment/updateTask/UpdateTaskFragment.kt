@@ -76,7 +76,7 @@ class UpdateTaskFragment(user: User) : Fragment(), DatePickerDialog.OnDateSetLis
         userDatabase = UserDatabase.getDatabase(requireContext())
         userDao = userDatabase.userDao()
         userRepository = UserRepository(userDao)
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
         update_task_input.setText(updateText)
         update_Tv_some.text = updateDate

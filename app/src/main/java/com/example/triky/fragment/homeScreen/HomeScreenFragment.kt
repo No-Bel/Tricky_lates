@@ -76,7 +76,7 @@ class HomeScreenFragment(val EditTask: (user: User) -> Unit): Fragment(), Adapte
         adapter.editItem(this)
 
         //ViewModel
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
         mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
             adapter.setData(user)
         })

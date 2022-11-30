@@ -58,7 +58,7 @@ class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
     }
 
     private fun init() {
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
     }
 
 
@@ -216,7 +216,6 @@ class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
             val user = User(0, taskText, checked = false, selected = false,colorNumber , dataText)
             /** add Data to Database **/
             mUserViewModel.addUserVm(user)
-//            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
             /** Back to HomeScreenFragment **/
             listener?.switchHomeScreenFragment()
         } else {

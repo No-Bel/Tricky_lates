@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), OnboardingFragment.ButtonClicked,
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         sharePref = Preference(this)
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
 
         homeScreenFragment = HomeScreenFragment(EditTask = {user -> updateTask(user)})
 
@@ -40,10 +40,7 @@ class MainActivity : AppCompatActivity(), OnboardingFragment.ButtonClicked,
             mUserViewModel.readAllData.observe(this, Observer {
                 if (it.isEmpty()) {
                     noTaskHomeScreen()
-                }
-            })
-            mUserViewModel.readAllData.observe(this, Observer {
-                if (it.isNotEmpty()) {
+                } else {
                     homeScreen()
                 }
             })

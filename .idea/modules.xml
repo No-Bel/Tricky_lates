@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tricky_lates.iml" filepath="$PROJECT_DIR$/.idea/modules/Tricky_lates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Triky.iml" filepath="$PROJECT_DIR$/.idea/modules/Triky.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Triky.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Triky.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Triky.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Triky.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Triky.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Triky.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Triky.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Triky.app.unitTest.iml" />
     </modules>
   </component>
 </project>
