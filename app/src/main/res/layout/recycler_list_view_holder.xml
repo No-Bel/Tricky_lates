@@ -30,18 +30,6 @@
         app:layout_constraintVertical_bias="0.0"
         tools:text="Complete open water diving  " />
 
-<!--    <TextView-->
-<!--        android:id="@+id/change_task"-->
-<!--        android:layout_width="15dp"-->
-<!--        android:layout_height="15dp"-->
-<!--        android:layout_marginStart="4dp"-->
-<!--        android:layout_marginTop="18dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:background="@drawable/grey_oval"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/red_task_color"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/list_holder"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <TextView
         android:id="@+id/date_list_holder"
         android:layout_width="wrap_content"

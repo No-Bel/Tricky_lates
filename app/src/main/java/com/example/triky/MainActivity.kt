@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), OnboardingFragment.ButtonClicked,
 
     // onBoarding || firstScreen( noTaskHomeScreen || homeScreen )
     private fun appStart() {
-        if (sharePref.getWhenAppFirstTimeOpen()) {
+        if (sharePref.getValueWhenAppFirstTimeOpen()) {
             mUserViewModel.readAllData.observe(this, Observer {
                 if (it.isEmpty()) {
                     noTaskHomeScreen()
@@ -75,9 +75,7 @@ class MainActivity : AppCompatActivity(), OnboardingFragment.ButtonClicked,
             .beginTransaction()
             .replace(R.id.fragment_container, homeScreenFragment)
             .commit()
-        sharePref.saveWhenAppFirstTimeOpen(true)
     }
-
 
     override fun switchOnAddFragment() {
         supportFragmentManager

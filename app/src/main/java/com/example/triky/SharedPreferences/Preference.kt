@@ -5,19 +5,18 @@ import android.content.SharedPreferences
 
 class Preference(context: Context) {
 
-
     private val ONBOARDING_JUST_ONCE = ""
     private val key = "Key"
     private val preference = context.getSharedPreferences(ONBOARDING_JUST_ONCE , Context.MODE_PRIVATE)
     private val editor = preference.edit()
 
 
-    fun saveWhenAppFirstTimeOpen(value: Boolean) {
+    fun saveValueWhenAppFirstTimeOpen(value: Boolean) {
         editor.putBoolean(key, value)
         editor.apply()
     }
 
-    fun getWhenAppFirstTimeOpen(): Boolean {
+    fun getValueWhenAppFirstTimeOpen(): Boolean {
         return preference.getBoolean(key, false)
     }
 }

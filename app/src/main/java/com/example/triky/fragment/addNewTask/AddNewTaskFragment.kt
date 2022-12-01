@@ -44,17 +44,17 @@ class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
         init()
         setListener()
         openKeyboard()
-        backToHomeScreen()
-        cancelBtn()
-        chooseColor()
-        pickDate()
-        btnColorIfNotEmpty()
     }
 
     private fun setListener() {
         save_Btn.setOnClickListener {
             insertDataToDatabase()
         }
+        backToHomeScreen()
+        cancelBtn()
+        chooseColor()
+        pickDate()
+        btnColorIfNotEmpty()
     }
 
     private fun init() {
@@ -243,7 +243,6 @@ class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
 
     /** Save Button Color **/
     private fun btnColorIfNotEmpty() {
-
         Task_input.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 if (s.trim().isNotEmpty()) {
@@ -256,7 +255,6 @@ class AddNewTaskFragment : Fragment(), DatePickerDialog.OnDateSetListener {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
                 save_Btn.setBackgroundResource(R.drawable.save_grey_btn)
             }
-
             override fun afterTextChanged(s: Editable) {}
         })
     }

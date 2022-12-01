@@ -48,7 +48,7 @@ class Adapter(
             holder.itemView.checkBox.setButtonDrawable(R.drawable.unselected_checkbox)
         }
         holder.itemView.checkBox.isChecked = false
-        holder.itemView.list_holder.text = currentItem.textInfo
+        holder.itemView.list_holder.text = currentItem.textInfo.trim() //Returns a string having leading and trailing whitespace removed.
         holder.changeTask(currentItem)
         holder.clickListener(currentItem, holder, position)
 
